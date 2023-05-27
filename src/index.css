@@ -190,3 +190,23 @@ main {
 	padding: 0rem 1.5rem;
 	width: 75%;
 }
+
+.new-habit-buttons {
+	display: flex;
+}
+
+.new-sleep-form {
+	flex-grow: 1;
+}
+
+.sleep-form-length {
+	width: 100%;
+}
+
+.new-hydration-form {
+	flex-grow: 1;
+}
+
+.hydration-form-cups {
+	width: 100%;
+}
