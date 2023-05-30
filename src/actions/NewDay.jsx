@@ -11,9 +11,7 @@ const NewDay = () => {
 			headers: {
 				Authorization: authHeader(),
 			},
-		}).then(() => {
-			console.log("Zadzialalo!");
-		});
+		}).then(() => {});
 	};
 
 	return (

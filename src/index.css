@@ -195,18 +195,39 @@ main {
 	display: flex;
 }
 
-.new-sleep-form {
-	flex-grow: 1;
-}
-
 .sleep-form-length {
 	width: 100%;
 }
 
-.new-hydration-form {
-	flex-grow: 1;
-}
-
 .hydration-form-cups {
 	width: 100%;
+}
+
+.day-tile {
+	display: flex;
+	justify-content: space-between;
+}
+
+.home {
+	width: 75%;
+}
+
+.new-habit-buttons {
+	width: 100%;
+	border: 1px rgb(34, 3, 77) solid;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px rgb(34, 3, 68);
+	padding: 0.5rem 1.5rem 1.5rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.form-value {
+	display: flex;
+	flex-direction: column;
+}
+
+.new-form {
+	max-width: 340px;
+	flex-grow: 1;
 }

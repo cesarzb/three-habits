@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuthHeader } from "react-auth-kit";
 
-const NewHydration = () => {
+const NewHydration = ({ fetchDays }) => {
 	const authHeader = useAuthHeader();
 	const [cups, setCups] = useState(8);
 
@@ -16,14 +16,14 @@ const NewHydration = () => {
 			},
 			body: JSON.stringify({ hydration: { cups: cups } }),
 		}).then(() => {
-			console.log("Zadzialalo!");
+			fetchDays();
 		});
 	};
 
 	return (
-		<form className="new-hydration-form">
+		<form className="new-form">
 			<div className="form-value">
-				<label className="hydration-cups" htmlFor="email">
+				<label className="hydration-cups" htmlFor="hydration-cups">
 					Cups
 				</label>
 				<input

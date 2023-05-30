@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { useAuthHeader } from "react-auth-kit";
-const NewSleep = ({ fetchDays }) => {
+const NewActivity = ({ fetchDays }) => {
 	const authHeader = useAuthHeader();
-	const [length, setLength] = useState("8:15");
+	const [date, setDate] = useState("8:15");
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		fetch("http://localhost:3000/api/v1/sleeps", {
+		fetch("http://localhost:3000/api/v1/activities", {
 			method: "POST",
 			headers: {
 				Authorization: authHeader(),
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify({ sleep: { length: length } }),
+			body: JSON.stringify({ activity: { date: date } }),
 		}).then(() => {
 			fetchDays();
 		});
@@ -22,25 +22,25 @@ const NewSleep = ({ fetchDays }) => {
 	return (
 		<form className="new-form">
 			<div className="form-value">
-				<label className="sleep-length" htmlFor="sleep-length">
-					Length
+				<label className="activity-date" htmlFor="activity-date">
+					Time of activity
 				</label>
 				<input
-					className="sleep-form-length"
+					className="activity-form-date"
 					type="text"
-					id="sleep-length"
-					name="length"
-					value={length}
+					id="activity-date"
+					name="date"
+					value={date}
 					onChange={(e) => {
-						setLength(e.target.value);
+						setDate(e.target.value);
 					}}
 				/>
 			</div>
-			<button className="create-sleep" onClick={handleSubmit}>
-				Add sleep
+			<button className="create-activity" onClick={handleSubmit}>
+				Add activity
 			</button>
 		</form>
 	);
 };
 
-export default NewSleep;
+export default NewActivity;
