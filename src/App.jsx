@@ -8,6 +8,7 @@ import { AuthProvider, RequireAuth } from "react-auth-kit";
 // pages
 import Home from "./pages/Home";
 import Login from "./pages/authentication/Login";
+import Register from "./pages/authentication/Register";
 
 // layouts
 import RootLayout from "./layouts/RootLayout";
@@ -35,6 +36,7 @@ function App() {
 				/>
 
 				<Route path="login" element={<Login />} />
+				<Route path="register" element={<Register />} />
 			</Route>
 		)
 	);

@@ -6,8 +6,8 @@ import NewButtons from "./NewButtons";
 const Home = () => {
 	const [data, setData] = useState(null);
 	const [isPending, setIsPending] = useState(true);
-	const [hydration, setHydration] = useState(true);
-	const [sleep, setSleep] = useState(true);
+	const [hydration, setHydration] = useState(null);
+	const [sleep, setSleep] = useState(null);
 	const [buttonsPending, setButtonsPending] = useState(true);
 
 	const authHeader = useAuthHeader();
@@ -32,8 +32,8 @@ const Home = () => {
 					fetchNewestDay(data[0].id);
 				} else {
 					setButtonsPending(false);
-					setHydration(true);
-					setSleep(true);
+					setHydration(null);
+					setSleep(null);
 				}
 
 				setIsPending(false);
@@ -57,8 +57,8 @@ const Home = () => {
 				return res.json();
 			})
 			.then((data) => {
-				setHydration(!data["hydration"]);
-				setSleep(!data["sleep"]);
+				setHydration(data["hydration"]);
+				setSleep(data["sleep"]);
 				setButtonsPending(false);
 			});
 	};
@@ -77,6 +77,7 @@ const Home = () => {
 						hydration={!buttonsPending && hydration}
 						sleep={!buttonsPending && sleep}
 					/>
+					{/* <UpdateHydration fetchDays={fetchDays} /> */}
 					<DayList days={data} fetchDays={fetchDays} />
 				</>
 			)}

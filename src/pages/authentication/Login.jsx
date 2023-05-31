@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSignIn } from "react-auth-kit";
 
 const Login = () => {
@@ -82,6 +82,8 @@ const Login = () => {
 			<button className="login-button" onClick={handleSubmit}>
 				Log in
 			</button>
+
+			<Link to="/register">You don't have an account?!</Link>
 		</form>
 	);
 };
