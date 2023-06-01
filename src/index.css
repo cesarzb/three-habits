@@ -76,7 +76,7 @@ button {
 .new-habit-buttons {
 	display: flex;
 	justify-content: space-between;
-	width: 50vw;
+	width: 90vw;
 	background-color: var(--grey-color);
 	/* border: 3px solid var(--beige-color); */
 	padding: 1rem;
@@ -124,7 +124,7 @@ button {
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
-	width: 50vw;
+	width: 90vw;
 	background-color: var(--grey-color);
 	/* border: 3px solid var(--beige-color); */
 	padding: 1rem 2rem;
