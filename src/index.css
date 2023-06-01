@@ -17,8 +17,10 @@ body {
 	font-family: "Trebuchet MS", sans-serif;
 }
 
-a {
+a,
+button {
 	text-decoration: none;
+	color: var(--orange-color);
 }
 
 /* root  */
@@ -40,8 +42,10 @@ a {
 	/* background-color: red; */
 	margin-bottom: 2rem;
 	position: sticky;
-	box-shadow: var(--orange-color);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 	background-color: var(--beige-color);
+	font-size: 1.2rem;
+	color: var(--orange-color);
 }
 
 .nav-buttons {
@@ -49,4 +53,17 @@ a {
 	display: flex;
 	justify-content: flex-end;
 	gap: 2rem;
+}
+
+.logo {
+	font-size: 1rem;
+}
+
+.logout-button {
+	background: none;
+	border: none;
+	padding: 0;
+	font-size: 1em;
+	/*input has OS specific font-family*/
+	cursor: pointer;
 }

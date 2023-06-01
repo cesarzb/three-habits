@@ -7,12 +7,14 @@ const Navbar = () => {
 	return (
 		<nav className="navbar">
 			<div className="logo">
-				<h2>3Habits</h2>
+				<NavLink className="nav-button" to="/">
+					<h2>3Habits</h2>
+				</NavLink>
 			</div>
 			<div className="nav-buttons">
-				<NavLink className="nav-button" to="/">
+				{/* <NavLink className="nav-button" to="/">
 					Days
-				</NavLink>
+				</NavLink> */}
 				<div className="nav-button">{isAuthenticated() && <Logout />}</div>
 			</div>
 		</nav>
