@@ -22,11 +22,11 @@ const NewActivity = ({ fetchDays }) => {
 	return (
 		<form className="new-form">
 			<div className="form-value">
-				<label className="activity-date" htmlFor="activity-date">
+				<label className="form-label" htmlFor="activity-date">
 					Time of activity
 				</label>
 				<input
-					className="activity-form-date"
+					className="form-input"
 					type="text"
 					id="activity-date"
 					name="date"
@@ -36,7 +36,7 @@ const NewActivity = ({ fetchDays }) => {
 					}}
 				/>
 			</div>
-			<button className="create-activity" onClick={handleSubmit}>
+			<button className="create-habit" onClick={handleSubmit}>
 				Add activity
 			</button>
 		</form>

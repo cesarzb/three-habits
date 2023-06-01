@@ -6,8 +6,8 @@ import NewButtons from "./NewButtons";
 const Home = () => {
 	const [data, setData] = useState(null);
 	const [isPending, setIsPending] = useState(true);
-	const [hydration, setHydration] = useState(null);
-	const [sleep, setSleep] = useState(null);
+	const [hydration, setHydration] = useState(true);
+	const [sleep, setSleep] = useState(true);
 	const [buttonsPending, setButtonsPending] = useState(true);
 
 	const authHeader = useAuthHeader();
@@ -30,6 +30,7 @@ const Home = () => {
 				const today = new Date();
 				if (monthAndDay(lastDay) === monthAndDay(today)) {
 					fetchNewestDay(data[0].id);
+					console.log("Co ja tu robię?");
 				} else {
 					setButtonsPending(false);
 					setHydration(null);

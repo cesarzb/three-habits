@@ -12,10 +12,12 @@ const SleepDetails = ({ sleep, fetchDay }) => {
 	};
 
 	return (
-		<div className="sleep-info">
+		<div className="habit-info">
 			<h3>Sleep</h3>
-			<p>Length: {sleepLength(sleep.length)}</p>
-			<DeleteSleep sleepId={sleep.id} fetchDay={fetchDay} />
+			<div className="habit-event">
+				<p>Length: {sleepLength(sleep.length)}</p>
+				<DeleteSleep sleepId={sleep.id} fetchDay={fetchDay} />
+			</div>
 		</div>
 	);
 };

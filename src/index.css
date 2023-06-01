@@ -8,6 +8,7 @@
 
 * {
 	box-sizing: border-box;
+	color: var(--orange-color);
 }
 
 body {
@@ -31,6 +32,14 @@ button {
 	position: relative;
 }
 
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	font-size: 1em;
+	cursor: pointer;
+}
+
 .navbar {
 	width: 100vw;
 	top: 0px;
@@ -39,7 +48,6 @@ button {
 	justify-content: space-between;
 	padding: 0px 20px;
 	align-items: baseline;
-	/* background-color: red; */
 	margin-bottom: 2rem;
 	position: sticky;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -49,21 +57,144 @@ button {
 }
 
 .nav-buttons {
-	/* background-color: azure; */
 	display: flex;
 	justify-content: flex-end;
 	gap: 2rem;
+	padding: 0.5rem;
+	border-radius: 5px;
+	transition: background-color 300ms ease;
+}
+
+.nav-buttons:hover {
+	background-color: var(--grey-color);
 }
 
 .logo {
 	font-size: 1rem;
 }
 
-.logout-button {
-	background: none;
-	border: none;
-	padding: 0;
-	font-size: 1em;
-	/*input has OS specific font-family*/
-	cursor: pointer;
+.new-habit-buttons {
+	display: flex;
+	justify-content: space-between;
+	width: 50vw;
+	background-color: var(--grey-color);
+	/* border: 3px solid var(--beige-color); */
+	padding: 1rem;
+	border-radius: 10px;
+	gap: 1rem;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.new-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.form-input {
+	color: black;
+}
+
+.create-habit {
+	align-self: flex-end;
+	padding: 0.5rem;
+	border-radius: 5px;
+	box-sizing: border-box;
+	transition: background-color 300ms ease;
+	/* transition: box-shadow 300ms ease; */
+}
+
+.create-habit:hover {
+	background-color: var(--beige-color);
+	/* box-shadow: inset 0 0 0 3px var(--beige-color); */
+}
+
+.form-value {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-label {
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+	font-weight: 1000;
+}
+
+.day-tile {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	width: 50vw;
+	background-color: var(--grey-color);
+	/* border: 3px solid var(--beige-color); */
+	padding: 1rem 2rem;
+	border-radius: 10px;
+	gap: 1rem;
+	margin: 1rem 0px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.delete-day-button {
+	width: 2rem;
+	height: 2rem;
+	color: var(--orange-color);
+	border-radius: 5px;
+	/* transition: color 500ms ease; */
+	transition: background-color 300ms ease;
+}
+
+.delete-day-button:hover {
+	background-color: var(--beige-color);
+}
+
+.day-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: baseline;
+	width: 50vw;
+	background-color: var(--grey-color);
+	/* border: 3px solid var(--beige-color); */
+	padding: 1rem 2rem;
+	border-radius: 10px;
+	gap: 1rem;
+	margin: 1rem 0px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.day-habits {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.habit-info {
+	background-color: var(--beige-color);
+	flex-grow: 1;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.habit-event {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.delete-habit-button {
+	width: 2rem;
+	height: 2rem;
+	color: var(--orange-color);
+	border-radius: 5px;
+	transition: background-color 300ms ease;
+}
+
+.delete-habit-button:hover {
+	background-color: var(--grey-color);
 }

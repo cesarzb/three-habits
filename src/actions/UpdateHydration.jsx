@@ -24,11 +24,11 @@ const UpdateHydration = ({ fetchDays, hydrationId }) => {
 	return (
 		<form className="new-form">
 			<div className="form-value">
-				<label className="hydration-cups" htmlFor="hydration-cups">
+				<label className="form-label" htmlFor="hydration-cups">
 					Cups
 				</label>
 				<input
-					className="hydration-form-cups"
+					className="form-input"
 					type="text"
 					id="hydration-cups"
 					name="cups"
@@ -42,7 +42,7 @@ const UpdateHydration = ({ fetchDays, hydrationId }) => {
 					}}
 				/>
 			</div>
-			<button className="create-hydration" onClick={handleSubmit}>
+			<button className="create-habit" onClick={handleSubmit}>
 				Update hydration
 			</button>
 		</form>

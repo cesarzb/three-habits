@@ -22,11 +22,11 @@ const NewSleep = ({ fetchDays }) => {
 	return (
 		<form className="new-form">
 			<div className="form-value">
-				<label className="sleep-length" htmlFor="sleep-length">
+				<label className="form-label" htmlFor="sleep-length">
 					Length
 				</label>
 				<input
-					className="sleep-form-length"
+					className="form-input"
 					type="text"
 					id="sleep-length"
 					name="length"
@@ -36,7 +36,7 @@ const NewSleep = ({ fetchDays }) => {
 					}}
 				/>
 			</div>
-			<button className="create-sleep" onClick={handleSubmit}>
+			<button className="create-habit" onClick={handleSubmit}>
 				Add sleep
 			</button>
 		</form>

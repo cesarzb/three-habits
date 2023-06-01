@@ -13,10 +13,10 @@ const ActivitiesDetails = ({ activities, fetchDay }) => {
 	};
 
 	return (
-		<div className="activities-info">
+		<div className="habit-info">
 			<h3>Activities</h3>
 			{activities.map((activity) => (
-				<div className="activity-info" key={activity.id}>
+				<div className="habit-event" key={activity.id}>
 					<p>Took place at: {activityTime(activity.date)}</p>
 					<DeleteActivity activityId={activity.id} fetchDay={fetchDay} />
 				</div>

@@ -15,7 +15,7 @@ const DeleteSleep = ({ sleepId, fetchDay }) => {
 	};
 
 	return (
-		<button className="delete-sleep-button" onClick={handleSubmit}>
+		<button className="delete-habit-button" onClick={handleSubmit}>
 			X
 		</button>
 	);

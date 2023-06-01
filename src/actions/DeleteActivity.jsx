@@ -15,7 +15,7 @@ const DeleteActivity = ({ activityId, fetchDay }) => {
 	};
 
 	return (
-		<button className="delete-activity-button" onClick={handleSubmit}>
+		<button className="delete-habit-button" onClick={handleSubmit}>
 			X
 		</button>
 	);

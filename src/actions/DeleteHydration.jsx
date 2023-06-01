@@ -15,7 +15,7 @@ const DeleteHydration = ({ hydrationId, fetchDay }) => {
 	};
 
 	return (
-		<button className="delete-hydration-button" onClick={handleSubmit}>
+		<button className="delete-habit-button" onClick={handleSubmit}>
 			X
 		</button>
 	);

@@ -4,9 +4,6 @@ import NewActivity from "../actions/NewActivity";
 import UpdateHydration from "../actions/UpdateHydration";
 
 const NewButtons = ({ fetchDays, hydration, sleep }) => {
-	console.log("Sleep", sleep);
-	console.log("Hydration", hydration);
-
 	return (
 		<div className="new-habit-buttons">
 			{<NewActivity fetchDays={fetchDays} />}
