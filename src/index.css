@@ -1,3 +1,11 @@
+:root {
+	--white-color: #ffffff;
+	--grey-color: #f9f6f7;
+	--beige-color: #ffe8d6;
+	--orange-color: #ff971d;
+	--font-size: 16px;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -5,7 +13,12 @@
 body {
 	margin: 0px;
 	width: 100vw;
+	height: 100vh;
 	font-family: "Trebuchet MS", sans-serif;
+}
+
+a {
+	text-decoration: none;
 }
 
 /* root  */
@@ -18,13 +31,17 @@ body {
 
 .navbar {
 	width: 100vw;
-	position: sticky;
+	top: 0px;
+	left: 0px;
 	display: flex;
 	justify-content: space-between;
 	padding: 0px 20px;
 	align-items: baseline;
 	/* background-color: red; */
 	margin-bottom: 2rem;
+	position: sticky;
+	box-shadow: var(--orange-color);
+	background-color: var(--beige-color);
 }
 
 .nav-buttons {
