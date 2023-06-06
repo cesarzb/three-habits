@@ -1,4 +1,6 @@
 import { useAuthHeader } from "react-auth-kit";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 const DeleteActivity = ({ activityId, fetchDay }) => {
 	const authHeader = useAuthHeader();
@@ -16,7 +18,8 @@ const DeleteActivity = ({ activityId, fetchDay }) => {
 
 	return (
 		<button className="delete-habit-button" onClick={handleSubmit}>
-			X
+			{/* X */}
+			<FontAwesomeIcon icon={faX} />
 		</button>
 	);
 };

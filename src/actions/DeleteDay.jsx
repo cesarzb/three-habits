@@ -1,4 +1,6 @@
 import { useAuthHeader } from "react-auth-kit";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 const DeleteDay = ({ dayId, fetchDays }) => {
 	const authHeader = useAuthHeader();
@@ -16,7 +18,8 @@ const DeleteDay = ({ dayId, fetchDays }) => {
 
 	return (
 		<button className="delete-day-button" onClick={handleSubmit}>
-			X
+			{/* X */}
+			<FontAwesomeIcon icon={faX} />
 		</button>
 	);
 };

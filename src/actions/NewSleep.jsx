@@ -37,7 +37,7 @@ const NewSleep = ({ fetchDays }) => {
 				/>
 			</div>
 			<button className="create-habit" onClick={handleSubmit}>
-				Add sleep
+				Add
 			</button>
 		</form>
 	);

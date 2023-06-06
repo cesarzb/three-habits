@@ -37,7 +37,7 @@ const NewActivity = ({ fetchDays }) => {
 				/>
 			</div>
 			<button className="create-habit" onClick={handleSubmit}>
-				Add activity
+				Add
 			</button>
 		</form>
 	);

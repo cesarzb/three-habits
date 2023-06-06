@@ -38,7 +38,7 @@ const NewHydration = ({ fetchDays }) => {
 				/>
 			</div>
 			<button className="create-habit" onClick={handleSubmit}>
-				Add hydration
+				Add
 			</button>
 		</form>
 	);
