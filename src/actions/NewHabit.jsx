@@ -1,38 +1,43 @@
 import { useState } from "react";
 import { useAuthHeader } from "react-auth-kit";
-const NewActivity = ({ fetchDays }) => {
+
+const NewHabit = ({ fetchDays, singular, plural, attrDefault, attrName }) => {
 	const authHeader = useAuthHeader();
-	const [date, setDate] = useState("8:15");
+	const [attr, setAttr] = useState(attrDefault);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		fetch("http://localhost:3000/api/v1/activities", {
+		fetch(`http://localhost:3000/api/v1/${plural}`, {
 			method: "POST",
 			headers: {
 				Authorization: authHeader(),
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify({ activity: { date: date } }),
+			body: JSON.stringify({ [singular]: { [attrName]: `${attr}` } }),
 		}).then(() => {
 			fetchDays();
 		});
 	};
 
+	const capitalize = (str) => {
+		return str.split("")[0].toUpperCase() + str.slice(1, str.length);
+	};
+
 	return (
 		<form className="new-form">
 			<div className="form-value">
-				<label className="form-label" htmlFor="activity-date">
-					Time of activity
+				<label className="form-label" htmlFor={`${singular}-${attrName}`}>
+					{capitalize(attrName)}
 				</label>
 				<input
 					className="form-input"
 					type="text"
-					id="activity-date"
-					name="date"
-					value={date}
+					id={`${singular}-${attrName}`}
+					name={attrName}
+					value={attr}
 					onChange={(e) => {
-						setDate(e.target.value);
+						setAttr(e.target.value);
 					}}
 				/>
 			</div>
@@ -43,4 +48,4 @@ const NewActivity = ({ fetchDays }) => {
 	);
 };
 
-export default NewActivity;
+export default NewHabit;

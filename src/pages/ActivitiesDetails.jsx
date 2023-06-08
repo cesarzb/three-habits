@@ -1,4 +1,4 @@
-import DeleteActivity from "../actions/DeleteActivity";
+import DeleteHabit from "../actions/DeleteHabit";
 
 const ActivitiesDetails = ({ activities, fetchDay }) => {
 	const activityTime = (length) => {
@@ -18,7 +18,11 @@ const ActivitiesDetails = ({ activities, fetchDay }) => {
 			{activities.map((activity) => (
 				<div className="habit-event" key={activity.id}>
 					<p>Took place at: {activityTime(activity.date)}</p>
-					<DeleteActivity activityId={activity.id} fetchDay={fetchDay} />
+					<DeleteHabit
+						habitId={activity.id}
+						fetchDay={fetchDay}
+						plural={"activities"}
+					/>
 				</div>
 			))}
 		</div>

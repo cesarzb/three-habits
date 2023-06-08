@@ -18,7 +18,6 @@ const DeleteDay = ({ dayId, fetchDays }) => {
 
 	return (
 		<button className="delete-day-button" onClick={handleSubmit}>
-			{/* X */}
 			<FontAwesomeIcon icon={faX} />
 		</button>
 	);

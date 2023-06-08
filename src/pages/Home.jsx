@@ -30,13 +30,12 @@ const Home = () => {
 				const today = new Date();
 				if (monthAndDay(lastDay) === monthAndDay(today)) {
 					fetchNewestDay(data[0].id);
-					console.log("Co ja tu robię?");
 				} else {
-					setButtonsPending(false);
 					setHydration(null);
 					setSleep(null);
 				}
 
+				setButtonsPending(false);
 				setIsPending(false);
 			})
 			.catch(() => {
@@ -60,7 +59,6 @@ const Home = () => {
 			.then((data) => {
 				setHydration(data["hydration"]);
 				setSleep(data["sleep"]);
-				setButtonsPending(false);
 			});
 	};
 

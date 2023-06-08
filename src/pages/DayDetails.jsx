@@ -50,7 +50,15 @@ const DayDetails = () => {
 				<>
 					<div className="day-info">
 						<h2 className="date">{useFormattedDate(data["day"].date)}</h2>
-						<p>Attended habits</p>
+					</div>
+					<div className="attended-habits">
+						{data["hydration"] ||
+						data["sleep"] ||
+						data["activities"].length !== 0 ? (
+							<h3>Attended habits</h3>
+						) : (
+							<h3>Just chillin...</h3>
+						)}
 					</div>
 					<div className="day-habits">
 						{data["sleep"] && (
