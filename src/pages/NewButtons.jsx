@@ -1,20 +1,37 @@
-import NewSleep from "../actions/NewSleep";
-import NewHydration from "../actions/NewHydration";
-import NewActivity from "../actions/NewActivity";
 import UpdateHydration from "../actions/UpdateHydration";
+import NewHabit from "../actions/NewHabit";
 
 const NewButtons = ({ fetchDays, hydration, sleep }) => {
-	console.log("Sleep", sleep);
-	console.log("Hydration", hydration);
-
 	return (
 		<div className="new-habit-buttons">
-			{<NewActivity fetchDays={fetchDays} />}
-			{!sleep && <NewSleep fetchDays={fetchDays} />}
+			{
+				<NewHabit
+					fetchDays={fetchDays}
+					singular={"activity"}
+					plural={"activities"}
+					attrDefault={"12:00"}
+					attrName={"date"}
+				/>
+			}
+			{!sleep && (
+				<NewHabit
+					fetchDays={fetchDays}
+					singular={"sleep"}
+					plural={"sleeps"}
+					attrDefault={"8:00"}
+					attrName={"length"}
+				/>
+			)}
 			{hydration ? (
 				<UpdateHydration fetchDays={fetchDays} hydrationId={hydration.id} />
 			) : (
-				<NewHydration fetchDays={fetchDays} />
+				<NewHabit
+					fetchDays={fetchDays}
+					singular={"hydration"}
+					plural={"hydrations"}
+					attrDefault={8}
+					attrName={"cups"}
+				/>
 			)}
 		</div>
 	);

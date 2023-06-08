@@ -47,10 +47,20 @@ const DayDetails = () => {
 			{isPending && <div>Loading...</div>}
 			{error && <div>An error occured: {error}</div>}
 			{data && (
-				<div className="day-info">
-					<h2 className="date">{useFormattedDate(data["day"].date)}</h2>
+				<>
+					<div className="day-info">
+						<h2 className="date">{useFormattedDate(data["day"].date)}</h2>
+					</div>
+					<div className="attended-habits">
+						{data["hydration"] ||
+						data["sleep"] ||
+						data["activities"].length !== 0 ? (
+							<h3>Attended habits</h3>
+						) : (
+							<h3>Just chillin...</h3>
+						)}
+					</div>
 					<div className="day-habits">
-						<p>Attended habits</p>
 						{data["sleep"] && (
 							<SleepDetails sleep={data["sleep"]} fetchDay={fetchDay} />
 						)}
@@ -67,7 +77,7 @@ const DayDetails = () => {
 							/>
 						)}
 					</div>
-				</div>
+				</>
 			)}
 		</div>
 	);
