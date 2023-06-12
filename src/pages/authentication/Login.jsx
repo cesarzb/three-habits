@@ -84,7 +84,7 @@ const Login = () => {
 			</button>
 
 			<Link to="/register" className="alternative-method-link">
-				You have an account?
+				You don't have an account?!
 			</Link>
 		</form>
 	);
