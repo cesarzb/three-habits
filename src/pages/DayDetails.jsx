@@ -16,7 +16,7 @@ const DayDetails = () => {
   const [isPending, setIsPending] = useState(true);
 
   const fetchDay = () => {
-    fetch(API_URL + "/api/v1/days/" + id, {
+    fetch(`${API_URL}/api/v1/days/${id}`, {
       headers: {
         Authorization: authHeader(),
       },

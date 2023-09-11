@@ -9,7 +9,7 @@ const NewHabit = ({ fetchDays, singular, plural, attrDefault, attrName }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch(API_URL + `/api/v1/${plural}`, {
+    fetch(`${API_URL}/api/v1/${plural}`, {
       method: "POST",
       headers: {
         Authorization: authHeader(),

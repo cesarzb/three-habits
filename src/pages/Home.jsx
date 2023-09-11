@@ -14,7 +14,7 @@ const Home = () => {
   const authHeader = useAuthHeader();
 
   const fetchDays = () => {
-    fetch(API_URL + "/api/v1/days", {
+    fetch(`${API_URL}/api/v1/days`, {
       headers: {
         Authorization: authHeader(),
       },
@@ -49,7 +49,7 @@ const Home = () => {
   };
 
   const fetchNewestDay = (id) => {
-    fetch(API_URL + "/api/v1/days/" + id, {
+    fetch(`${API_URL}/api/v1/days/${id}`, {
       headers: {
         Authorization: authHeader(),
       },

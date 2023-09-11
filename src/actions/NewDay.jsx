@@ -7,7 +7,7 @@ const NewDay = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch(API_URL + "/api/v1/days", {
+    fetch(`${API_URL}/api/v1/days`, {
       method: "POST",
       headers: {
         Authorization: authHeader(),

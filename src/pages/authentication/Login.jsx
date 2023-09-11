@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = { user: { email: email, password: password } };
-    fetch(API_URL + "/users/sign_in", {
+    fetch(`${API_URL}/users/sign_in`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

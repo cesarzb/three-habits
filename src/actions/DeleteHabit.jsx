@@ -7,7 +7,7 @@ const DeleteHabit = ({ habitId, fetchDay, plural }) => {
   const authHeader = useAuthHeader();
 
   const handleSubmit = () => {
-    fetch(API_URL + `/api/v1/${plural}/` + habitId, {
+    fetch(`${API_URL}/api/v1/${plural}/${habitId}`, {
       method: "DELETE",
       headers: {
         Authorization: authHeader(),

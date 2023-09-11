@@ -8,7 +8,7 @@ const Logout = () => {
   const signOut = useSignOut();
 
   const handleSubmit = () => {
-    fetch(API_URL + "/users/sign_out", {
+    fetch(`${API_URL}/users/sign_out`, {
       method: "DELETE",
       headers: {
         Authorization: authHeader(),

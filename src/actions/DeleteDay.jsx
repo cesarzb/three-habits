@@ -7,7 +7,7 @@ const DeleteDay = ({ dayId, fetchDays }) => {
   const authHeader = useAuthHeader();
 
   const handleSubmit = () => {
-    fetch(API_URL + "/api/v1/days/" + dayId, {
+    fetch(`${API_URL}/api/v1/days/${dayId}`, {
       method: "DELETE",
       headers: {
         Authorization: authHeader(),

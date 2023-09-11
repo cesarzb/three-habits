@@ -10,7 +10,7 @@ const UpdateHydration = ({ fetchDays, hydrationId }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch(API_URL + "/api/v1/hydrations/" + hydrationId, {
+    fetch(`${API_URL}/api/v1/hydrations/${hydrationId}`, {
       method: "PATCH",
       headers: {
         Authorization: authHeader(),
