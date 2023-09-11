@@ -26,7 +26,7 @@ const Register = () => {
           password_confirmation: passwordConfirmation,
         },
       };
-      fetch(API_URL + "/users", {
+      fetch(`${API_URL}/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
